@@ -19,14 +19,18 @@ dependencies {
     // 스프링 시큐리티를 사용하기 위한 스타터 추가
     implementation 'org.springframework.boot:spring-boot-starter-security'
     // 타임리프에서 스프링 시큐리티를 사용하기 위한 의존성 추가
-    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+    implementation 'io.jsonwebtoken:jjwt:0.9.1' // 자바 jwt 라이브러리
+    implementation 'javax.xml.bind:jaxb-api:2.3.1' // xml문서와 java 객체 간 매핑 자동화
 
     runtimeOnly 'com.h2database:h2'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
 
+    testImplementation 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     // 스프링 시큐리티를 테스트하기 위한 의존성 추가
     testImplementation 'org.springframework.security:spring-security-test'
